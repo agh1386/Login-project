@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive;
+            background-color: #001f3f;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #000;
+        }
+
+        .signup-container {
+            background-color: #add8e6;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        .signup-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            color: #000;
+        }
+
+        .signup-container button {
+            background-color: #008000;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .signup-container button:hover {
+            background-color: #006400;
+        }
+
+        #login-link {
+            margin-top: 10px;
+            color: #000;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<div class="signup-container">
+    <h2>Sign Up</h2>
+    <form action="loggedIn.html">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="last-name">Last Name:</label>
+        <input type="text" id="last-name" name="last-name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone">
+
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="retype-password">Retype Password:</label>
+        <input type="password" id="retype-password" name="retype-password" required>
+
+        <button type="submit">Sign Up</button>
+    </form>
+    <p id="login-link" onclick="redirectToLoginPage()">Already have an account? Login here</p>
+</div>
+
+<script>
+    function redirectToLoginPage() {
+        window.location.href = 'index.html';
+        return false;
+    }
+</script>
+
+</body>
+</html>

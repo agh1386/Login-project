@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive;
+            background-color: #001f3f;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #000;
+        }
+
+        .login-container {
+            background-color: #add8e6;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        .login-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            color: #000;
+        }
+
+        .login-container button {
+            background-color: #008000;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .login-container button:hover {
+            background-color: #006400;
+        }
+
+        #signup-text {
+            margin-top: 10px;
+            color: #000;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-container">
+    <h2>Login</h2>
+    <form action="#" method="post" onsubmit="return redirectToAnotherPage()">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit">Login</button>
+    </form>
+    <p id="welcome-text" style="display:none;">Welcome! You have successfully logged in.</p>
+    <p id="signup-text" onclick="redirectToSignUpPage()">Haven't signed up yet?</p>
+</div>
+
+<script>
+    function redirectToAnotherPage() {
+        setTimeout(function () {
+            window.location.href = 'loggedIn.html';
+        }, 1000);
+
+        return false;
+    }
+
+    function redirectToSignUpPage() {
+        window.location.href = 'signUp.html';
+    }
+</script>
+
+</body>
+</html>
